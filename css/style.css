@@ -11,6 +11,21 @@ body {
     color: #000000;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 40px;
+  background-image: url("https://media.istockphoto.com/id/472317405/vector/a-flag-of-finland-with-a-blue-cross.jpg?s=612x612&w=0&k=20&c=3wNwzE_dcmIK6dkIv7SVAdz9y4lij4fBhybd9Nq63Ho=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
 /* Hero Section */
 .hero {
     height: 70vh;
@@ -263,24 +278,6 @@ section p {
     font-weight: bold;
   }
   
-
-  /* Style for the breadcrumb */
-.breadcrumb {
-    background-color: #f0f2f5;
-    padding: 10px 20px;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-.breadcrumb a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
 /* Main content section */
 .content {
     max-width: 800px;
@@ -333,3 +330,170 @@ footer {
     margin-top: 60px;
     font-size: 0.9rem;
 }
+
+/* Section-specific background for Culture */
+.culture-bg {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Finnish_sauna.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.culture-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: -1;
+}
+
+/* Carousel Styles */
+/* Carousel */
+.carousel-css {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .slide-title {
+    font-size: 1.8rem;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+
+  .slides-wrap {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    color:#f0f0f0;
+    flex: 0 0 100vw;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+  }
+  
+  .slide-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    max-width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .slide-info p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .arrow {
+    pointer-events: auto;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    margin: 0 15px;
+    transition: all 0.3s;
+    z-index: 10;
+  }
+
+ .arrow-set {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  #slide1:checked ~ .arrows .set1,
+  #slide2:checked ~ .arrows .set2,
+  #slide3:checked ~ .arrows .set3,
+  #slide4:checked ~ .arrows .set4,
+  #slide5:checked ~ .arrows .set5,
+  #slide6:checked ~ .arrows .set6 {
+    display: flex;
+    pointer-events: auto;
+  }
+  
+  .arrow:hover {
+    background: rgba(0,0,0,0.8);
+  }
+  
+  .nav {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .nav-dot {
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .nav-dot:hover {
+    background: rgba(255,255,255,0.8);
+  }
+  
+  #slide1:checked ~ .slides-wrap { transform: translateX(0%); }
+  #slide2:checked ~ .slides-wrap { transform: translateX(-16.666%); }
+  #slide3:checked ~ .slides-wrap { transform: translateX(-33.333%); }
+  #slide4:checked ~ .slides-wrap { transform: translateX(-50%); }
+  #slide5:checked ~ .slides-wrap { transform: translateX(-66.666%); }
+  #slide6:checked ~ .slides-wrap { transform: translateX(-83.333%); }
+  
+  #slide1:checked ~ .nav label[for="slide1"],
+  #slide2:checked ~ .nav label[for="slide2"],
+  #slide3:checked ~ .nav label[for="slide3"],
+  #slide4:checked ~ .nav label[for="slide4"],
+  #slide5:checked ~ .nav label[for="slide5"],
+  #slide6:checked ~ .nav label[for="slide6"] {
+    background: #fff;
+    transform: scale(1.2);
+  }
+  
+  input[name="slides"] {
+    display: none;
+  }
