@@ -1,59 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tourist Spots in Finland</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finland Tourist Spots</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>Tourist Spots</h1>
-  </header>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &gt; Tourist Spots
-  </div>
-
-  <main class="content">
-    <article>
-      <h2>Explore Finland's Beautiful Destinations</h2>
-      <p>Discover the most amazing tourist spots across Finland, from historic fortresses to Arctic wonders.</p>
-    </article>
-
-    <section class="section-bg history-bg">
-      <h2>Suomenlinna Fortress (Helsinki)</h2>
-      <p>A UNESCO World Heritage Site built on six islands, steeped in military history.</p>
-    </section>
-
-    <section class="section-bg tourist-bg">
-      <h2>Lapland</h2>
-      <p>Witness the Northern Lights, visit Santa Claus Village, and enjoy winter sports in this magical Arctic region.</p>
-    </section>
-
-    <section class="section-bg famous-bg">
-      <h2>Tampere</h2>
-      <p>Famous for saunas and beautiful lakes — a balance of urban life and nature.</p>
-    </section>
-
-    <section class="section-bg" style="background-image: url('https://www.visitfinland.com/dam/jcr:8243b00d-310e-4ce2-a9b1-3ee1c6b5dc4c/Idyllic%20Towns_Porvoo_red%20ochre%20buildings%202%20-%20Niko%20Laurila.jpg')">
-      <h2>Porvoo</h2>
-      <p>Old town charm with colorful wooden houses, cobblestone streets, and a riverside view.</p>
-    </section>
-
-    <section class="section-bg" style="background-image: url('https://content.r9cdn.net/rimg/dimg/f8/8a/c08396eb-city-18246-17314753486.jpg?width=1366&height=768&xhint=1218&yhint=836&crop=true')">
-      <h2>Turku</h2>
-      <p>Explore medieval castles and enjoy the riverside cafés and museums of Finland's oldest city.</p>
-    </section>
-
-    <section class="section-bg" style="background-image: url('https://digital.ihg.com/is/image/ihg/970x486_neighbourhood')">
-      <h2>Löyly (Helsinki)</h2>
-      <p>A modern architectural sauna masterpiece by the sea — perfect for wellness and aesthetics.</p>
-    </section>
+    <header class="hero">
+      <h1>Tourist Spots</h1>
+    </header>
     
-  <footer>
-    <p>&copy; BSIS II-1 Capuras</p>
-  </footer>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> > History
+    </nav>
+  <div class="carousel-css">
+    <!-- Radio buttons -->
+    <input type="radio" name="slides" id="slide1" checked>
+    <input type="radio" name="slides" id="slide2">
+    <input type="radio" name="slides" id="slide3">
+    <input type="radio" name="slides" id="slide4">
+    <input type="radio" name="slides" id="slide5">
+    <input type="radio" name="slides" id="slide6">
+  
+    <!-- Slides -->
+    <div class="slides-wrap">
+      <div class="slide" style="background-image:url('https://www.discoveringfinland.com/wp-content/uploads/2015/12/00-Suomen-Ilmakuva-Oy-1024x479.jpg')">
+        <div class="slide-title">Suomenlinna Fortress</div>
+        <div class="slide-info">A UNESCO World Heritage site, this sea fortress is spread across six islands and offers scenic views and rich history.</div>
+      </div>
+      <div class="slide" style="background-image:url('https://www.nordicvisitor.com/images/blogs/depositphotos_83977768_original-large.jpg')">
+        <div class="slide-title">Lapland</div>
+        <div class="slide-info">Experience the Northern Lights, reindeer safaris, and snowy wonderlands in Finland’s magical north.</div>
+      </div>
+      <div class="slide" style="background-image:url('https://media.istockphoto.com/id/622454704/photo/tampere-hdr.jpg?s=612x612&w=0&k=20&c=ty7U825Xp6KhmfWtG9TKKLVJ6WL7Ik2iZXP21fYBb_I=')">
+        <div class="slide-title">Tampere</div>
+        <div class="slide-info">Known for its industrial history and beautiful lakeside scenery, Tampere is vibrant and youthful.</div>
+      </div>
+      <div class="slide" style="background-image:url('https://t4.ftcdn.net/jpg/02/14/95/57/360_F_214955710_3j9uE65cQkddwrSenr7c7Lx5x0CqX4TQ.jpg')">
+        <div class="slide-title">Porvoo</div>
+        <div class="slide-info">One of Finland’s oldest towns, Porvoo charms with cobbled streets, wooden houses, and riverside cafés.</div>
+      </div>
+      <div class="slide" style="background-image:url('https://www.visitfinland.com/dam/jcr:ae52f57e-7590-4637-ab0f-2729325c3e98/Turku_Regions_Cathedral%20by%20river%20Aurajoki_by_Timo%20Oksanen_optimized.jpg')">
+        <div class="slide-title">Turku</div>
+        <div class="slide-info">A former capital with a medieval castle, lively cultural scene, and access to the beautiful archipelago.</div>
+      </div>
+      <div class="slide" style="background-image:url('https://featuringfinland.com/wp-content/uploads/2021/05/Finland_Helsinki_Church_1.jpg')">
+        <div class="slide-title">Helsinki</div>
+        <div class="slide-info">The capital city blends modern architecture, sea views, and a chill Scandinavian lifestyle.</div>
+      </div>
+    </div>
+    
+  
+    <!-- Arrows-->
+    <div class="arrows">
+      <div class="arrow-set set1">
+        <label for="slide6" class="arrow prev">❮</label>
+        <label for="slide2" class="arrow next">❯</label>
+      </div>
+      <div class="arrow-set set2">
+        <label for="slide1" class="arrow prev">❮</label>
+        <label for="slide3" class="arrow next">❯</label>
+      </div>
+      <div class="arrow-set set3">
+        <label for="slide2" class="arrow prev">❮</label>
+        <label for="slide4" class="arrow next">❯</label>
+      </div>
+      <div class="arrow-set set4">
+        <label for="slide3" class="arrow prev">❮</label>
+        <label for="slide5" class="arrow next">❯</label>
+      </div>
+      <div class="arrow-set set5">
+        <label for="slide4" class="arrow prev">❮</label>
+        <label for="slide6" class="arrow next">❯</label>
+      </div>
+      <div class="arrow-set set6">
+        <label for="slide5" class="arrow prev">❮</label>
+        <label for="slide1" class="arrow next">❯</label>
+      </div>
+    </div>
 
+  
+    <!-- Dots -->
+    <div class="nav">
+      <label for="slide1" class="nav-dot"></label>
+      <label for="slide2" class="nav-dot"></label>
+      <label for="slide3" class="nav-dot"></label>
+      <label for="slide4" class="nav-dot"></label>
+      <label for="slide5" class="nav-dot"></label>
+      <label for="slide6" class="nav-dot"></label>
+    </div>
+  </div>  
+  </section>
 </body>
 </html>
